@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+{% block content %}
+    <h1>Hello, {{user.nickname}}!</h1>
+    {% for recipe in recipes %}
+    <div>
+        <h1>{{recipe.title.name}}</h1>
+        <pre>{{recipe.body}}</pre>
+    </div>
+    {% endfor %}
+{% endblock %}
